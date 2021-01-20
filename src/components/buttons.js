@@ -1,16 +1,28 @@
 import React from 'react';
 
-function Buttons({data,setData}) {
+function Buttons({data,setData,randomNum,setRandomNum}) {
  
   const btnClickedHandler=(e)=>{
-    setData(data+e.target.value)
+    setData(e.target.value)
+  
+    if(data===randomNum){
+     
+      console.log("congrats");
+    
+       setData("");
+       setRandomNum("");
+    } 
   }
- 
-  return (
+  
+  
+    
+  
+   return (
       <div>
         
         
         <div className="wrapper">
+           
             <button value='1' className="btn" onClick={btnClickedHandler}>1</button>
             <button value='2' className="btn" onClick={btnClickedHandler}>2</button>
             <button value='3' className="btn" onClick={btnClickedHandler}>3</button>
