@@ -1,10 +1,10 @@
 import React from 'react';
 
-function Display() {
+function Display({data}) {
     return (
       <div >
         
-         <div className="input-feild"></div>
+         <div className="input-feild">{data}</div>
          
       
       </div>

@@ -1,0 +1,13 @@
+.btn {
+  cursor: pointer;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  padding: 20px;
+  font-size: 20x;
+  text-align: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}

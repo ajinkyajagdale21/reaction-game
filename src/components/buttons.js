@@ -1,11 +1,28 @@
 import React from 'react';
 
-function Buttons() {
-    return (
+function Buttons({data,setData}) {
+ 
+  const btnClickedHandler=(e)=>{
+    setData(data+e.target.value)
+  }
+ 
+  return (
       <div>
         
-         <h1>Buttons</h1>
-         
+        
+        <div className="wrapper">
+            <button value='1' className="btn" onClick={btnClickedHandler}>1</button>
+            <button value='2' className="btn" onClick={btnClickedHandler}>2</button>
+            <button value='3' className="btn" onClick={btnClickedHandler}>3</button>
+            <button value='4' className="btn" onClick={btnClickedHandler}>4</button>
+            <button value='5' className="btn" onClick={btnClickedHandler}>5</button>
+            <button value='6' className="btn" onClick={btnClickedHandler}>6</button>
+            <button value='7' className="btn" onClick={btnClickedHandler}>7</button>
+            <button value='8' className="btn" onClick={btnClickedHandler}>8</button>
+            <button value='9' className="btn" onClick={btnClickedHandler}>9</button>
+        </div>   
+        
+        
       
       </div>
     );
