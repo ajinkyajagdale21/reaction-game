@@ -1,20 +1,17 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 
-function Buttons({data,setData,randomNum,setRandomNum}) {
+function Buttons({data,setData,randomNum,setRandomNum,prevData}) {
  
+
   const btnClickedHandler=(e)=>{
     setData(e.target.value)
-  
-    if(data===randomNum){
-     
-      console.log("congrats");
-    
-       setData("");
-       setRandomNum("");
-    } 
   }
   
-  
+   useEffect(() => {
+    if(randomNum===prevData.current){
+        console.log("congrats");
+      } 
+   }, [data])  ;
     
   
    return (
