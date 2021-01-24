@@ -64,7 +64,7 @@ function Buttons({setData,randomNum,prevData,time,setTime,timerOn,setTimerOn}) {
          
           <span>{("0"+Math.floor((time/1000)%60)).slice(-2)}seconds: </span>
           <span>{("0"+((time/10)%100)).slice(-2)} millisonds</span>
-          
+          <h2>Your Reaction time should be less than 0.8 milliseconds</h2>
          </div>
     
         
