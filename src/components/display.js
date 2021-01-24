@@ -18,7 +18,6 @@ function Display({data,setData,randomNum,setRandomNum,prevData}) {
   return (
       <div >
          <div className="input-feild">{randomNum}</div>
-         <div className="input-feild">{data}</div>
       </div>
     );
   }
