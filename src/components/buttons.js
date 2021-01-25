@@ -1,4 +1,5 @@
 import React,{useEffect,useState} from 'react';
+import {Link} from "react-router-dom";
 
 function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    
@@ -49,22 +50,27 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    return (
       <div>
       <div className="wrapper">
-            <button value='1' className="btn" onClick={btnClickedHandler}>1</button>
-            <button value='2' className="btn" onClick={btnClickedHandler} >2</button>
-            <button value='3' className="btn" onClick={btnClickedHandler} >3</button>
-            <button value='4' className="btn" onClick={btnClickedHandler} >4</button>
-            <button value='5' className="btn" onClick={btnClickedHandler} >5</button>
-            <button value='6' className="btn" onClick={btnClickedHandler} >6</button>
-            <button value='7' className="btn" onClick={btnClickedHandler} >7</button>
-            <button value='8' className="btn" onClick={btnClickedHandler} >8</button>
-            <button value='9' className="btn" onClick={btnClickedHandler} >9</button>
+            <button value='1' className="btn" onClick={btnClickedHandler}>One</button>
+            <button value='2' className="btn" onClick={btnClickedHandler} >Two</button>
+            <button value='3' className="btn" onClick={btnClickedHandler} >Three</button>
+            <button value='4' className="btn" onClick={btnClickedHandler} >Four</button>
+            <button value='5' className="btn" onClick={btnClickedHandler} >Five</button>
+            <button value='6' className="btn" onClick={btnClickedHandler} >Six</button>
+            <button value='7' className="btn" onClick={btnClickedHandler} >Seven</button>
+            <button value='8' className="btn" onClick={btnClickedHandler} >Eight</button>
+            <button value='9' className="btn" onClick={btnClickedHandler} >Nine</button>
           </div>    
            
          <div>
          
           <span>{("0"+Math.floor((time/1000)%60)).slice(-2)}seconds: </span>
           <span>{("0"+((time/10)%100)).slice(-2)} millisonds</span>
-          <h2>Your Reaction time should be less than 0.85 seconds</h2>
+          <h2>Your Reaction time should be less than 0.75 seconds</h2>
+          
+          <Link to="./" >
+            <button>Restart</button>   
+          </Link>
+          
          </div>
     
         

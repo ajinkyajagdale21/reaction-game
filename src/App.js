@@ -1,28 +1,22 @@
-import React, { useState} from 'react';
-import Display from './components/display';
-import Buttons from './components/buttons';
+import React from 'react';
+import Merge from './components/merge';
 import "./styles/app.scss";
+import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import Homepage from './components/start';
 
 
 function App() {
 
-  const [data, setData] = useState("");
-  const [randomNum, setRandomNum] = useState("");
-  const [time, setTime] = useState(0);
-  const [timerOn, setTimerOn] = useState(false);
-
   return (
-    <div className="App">
-
-      <h1>Reaction game</h1>
-      <button >start</button>
-
-
-      <Display data={data} setData={setData} randomNum={randomNum} setRandomNum={setRandomNum} />
-      <Buttons data={data} setData={setData} randomNum={randomNum} time={time} setTime={setTime} timerOn={timerOn} setTimerOn={setTimerOn} />
-
-
-    </div>
+   
+    <Router>  
+      <div className="App">
+       <Switch >
+        <Route path="/" exact  component={Homepage}/>
+        <Route path="/merge" exact component={Merge}/>  
+       </Switch>
+      </div>
+    </Router>
   );
 }
 
