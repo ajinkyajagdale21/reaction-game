@@ -1,6 +1,6 @@
 import React,{useEffect,useState} from 'react';
 
-function Buttons({setData,randomNum,prevData,time,setTime,timerOn,setTimerOn}) {
+function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    
   
   const [gotData,setgotData]=useState(false);
@@ -10,12 +10,12 @@ function Buttons({setData,randomNum,prevData,time,setTime,timerOn,setTimerOn}) {
     setData(e.target.value);
     setgotData(true);
  }
-  
+  //console.log(data);
   
    useEffect(() => {
     setTimerOn(true);
-    if(gotData===true)
-    if(randomNum===prevData.current){
+    if(gotData===true){
+    if(randomNum===data){
           // console.log("done");
         setTimerOn(false);
       } 
@@ -23,7 +23,7 @@ function Buttons({setData,randomNum,prevData,time,setTime,timerOn,setTimerOn}) {
       setTimerOn(false); 
       setTime(0);
      }
-      // eslint-disable-next-line react-hooks/exhaustive-deps
+     } // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gotData]);
 
    useEffect(() => {
