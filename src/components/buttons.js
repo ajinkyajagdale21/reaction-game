@@ -62,19 +62,22 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
             <button value='9' className="btn" onClick={btnClickedHandler} >Nine</button>
           </div>    
            
-      <div>
-          <div className={`${rightAnswer?'r':'w'}: `}>
-            <h3> <span>Your time reaction is:  {("0"+Math.floor((time/1000)%60)).slice(-2)}.</span>
-            <span>{("0"+((time/10)%100)).slice(-2)} seconds</span></h3>
-            <h3>Your Reaction time should be less than 00.75 seconds</h3>
-          </div>
-            
+      <div className="btns">
+          <div>
           
+            <h3> <span>Your Reaction Time is:  {("0"+Math.floor((time/1000)%60)).slice(-2)}.</span>
+            <span>{("0"+((time/10)%100)).slice(-2)} seconds !!!</span></h3>
+          
+            <h3>Reaction time should be less than 00.75 seconds.</h3>
+          
+          </div>
+      </div>  
+       
+       <div className="restart">
           <Link to="./" >
-            <button>Restart</button>   
+            <button className="restart-btn" >PLAY AGAIN</button>   
           </Link>
-       </div>  
-      
+       </div>
       </div>
     );
   }

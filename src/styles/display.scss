@@ -1,11 +1,15 @@
 .input-feild {
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  margin: 1rem;
-  width: 40%;
+  align-items: center;
+  padding: 1.5rem;
+  margin: 2rem 3rem;
+  width: 70%;
   border: 3px solid #dfb4b9;
-  color: red;
+  color: black;
   border-radius: 0.25rem;
   margin-top: 6rem;
+  color: green;
+  font-weight: 600;
+  font-size: large;
 }

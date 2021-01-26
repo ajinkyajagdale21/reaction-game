@@ -1,8 +1,33 @@
-.btn {
-  cursor: pointer;
-}
-
 .wrapper {
   display: grid;
+  justify-content: center;
+  align-items: center;
   grid-template-columns: auto auto auto;
+}
+.btn {
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem 1rem;
+  background-color: #e4e2df;
+  color: #c71c4f;
+  font-size: medium;
+  cursor: pointer;
+  border: 2px solid rgb(61, 59, 59);
+}
+.btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1.5rem;
+}
+.restart {
+  display: flex;
+  justify-content: center;
+}
+.restart-btn {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: 3px solid #dfb4b9;
+  color: #c71c4f;
 }

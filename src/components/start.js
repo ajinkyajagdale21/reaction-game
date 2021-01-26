@@ -14,7 +14,7 @@ function Homepage() {
            <li>Game will start, when you click on start button.</li>
            <li>Remember, timer will start at that point when you click the start button.</li>
            <li>The reaction time will be calculated on your reaction speed.</li>
-           <li>To play the game again, click on Restart button at the end of game.</li>
+           <li>To play the game again, click on Play Again button at the end of game.</li>
         </ul>
       <Link to="./merge" >
         <button className="start-button" >Start</button>   

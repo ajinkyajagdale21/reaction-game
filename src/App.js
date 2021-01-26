@@ -4,7 +4,6 @@ import "./styles/app.scss";
 import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
 import Homepage from './components/start';
 
-
 function App() {
 
   return (
