@@ -5,7 +5,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    
   
   const [gotData,setgotData]=useState(false);
-//  const [rightAnswer,setRightAnswer]=useState(false);
+  const [rightAnswer,setRightAnswer]=useState(true);
  
   const btnClickedHandler=(e)=>{
     setData(e.target.value);
@@ -24,6 +24,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
      else{
       setTimerOn(false); 
       setTime(0);
+      setRightAnswer(false);
      }
      } // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gotData]);
@@ -63,14 +64,18 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
           </div>    
            
       <div className="btns">
-          <div>
           
+          <div>
+          {rightAnswer?
             <h3> <span>Your Reaction Time is:  {("0"+Math.floor((time/1000)%60)).slice(-2)}.</span>
             <span>{("0"+((time/10)%100)).slice(-2)} seconds !!!</span></h3>
-          
+          :
+           <h3>you clicked wrong button</h3>
+          }
             <h3>Reaction time should be less than 00.80 seconds.</h3>
           
           </div>
+          
       </div>  
        
        <div className="restart">
