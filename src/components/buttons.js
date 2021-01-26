@@ -5,7 +5,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    
   
   const [gotData,setgotData]=useState(false);
-  const [rightAnswer,setRightAnswer]=useState(false);
+//  const [rightAnswer,setRightAnswer]=useState(false);
  
   const btnClickedHandler=(e)=>{
     setData(e.target.value);
@@ -19,7 +19,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
     if(randomNum===data){
           // console.log("done");
         setTimerOn(false);
-        setRightAnswer(true);
+       
       } 
      else{
       setTimerOn(false); 
