@@ -1,0 +1,28 @@
+h1,
+h2 {
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+}
+li {
+  padding: 0.5rem 0.5rem;
+  display: flex;
+  justify-content: flex-start;
+  font-size: large;
+  font-weight: 400;
+}
+.start-button {
+  color: black;
+  border: 3px solid #dfb4b9;
+  padding: 0.5rem;
+  margin: 1rem;
+  cursor: pointer;
+}
+.bordered {
+  border: 3px solid #dfb4b9;
+  color: #c71c4f;
+  border-radius: 0.5rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}

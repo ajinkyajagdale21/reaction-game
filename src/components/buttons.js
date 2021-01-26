@@ -5,7 +5,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
    
   
   const [gotData,setgotData]=useState(false);
-
+  const [rightAnswer,setRightAnswer]=useState(false);
  
   const btnClickedHandler=(e)=>{
     setData(e.target.value);
@@ -19,6 +19,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
     if(randomNum===data){
           // console.log("done");
         setTimerOn(false);
+        setRightAnswer(true);
       } 
      else{
       setTimerOn(false); 
@@ -48,8 +49,8 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
     
   
    return (
-      <div>
-      <div className="wrapper">
+      <div >
+          <div className="wrapper">
             <button value='1' className="btn" onClick={btnClickedHandler}>One</button>
             <button value='2' className="btn" onClick={btnClickedHandler} >Two</button>
             <button value='3' className="btn" onClick={btnClickedHandler} >Three</button>
@@ -61,19 +62,18 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
             <button value='9' className="btn" onClick={btnClickedHandler} >Nine</button>
           </div>    
            
-         <div>
-         
-          <span>{("0"+Math.floor((time/1000)%60)).slice(-2)}seconds: </span>
-          <span>{("0"+((time/10)%100)).slice(-2)} millisonds</span>
-          <h2>Your Reaction time should be less than 0.75 seconds</h2>
+      <div>
+          <div className={`${rightAnswer?'r':'w'}: `}>
+            <h3> <span>Your time reaction is:  {("0"+Math.floor((time/1000)%60)).slice(-2)}.</span>
+            <span>{("0"+((time/10)%100)).slice(-2)} seconds</span></h3>
+            <h3>Your Reaction time should be less than 00.75 seconds</h3>
+          </div>
+            
           
           <Link to="./" >
             <button>Restart</button>   
           </Link>
-          
-         </div>
-    
-        
+       </div>  
       
       </div>
     );
