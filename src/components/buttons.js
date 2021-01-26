@@ -68,7 +68,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
             <h3> <span>Your Reaction Time is:  {("0"+Math.floor((time/1000)%60)).slice(-2)}.</span>
             <span>{("0"+((time/10)%100)).slice(-2)} seconds !!!</span></h3>
           
-            <h3>Reaction time should be less than 00.75 seconds.</h3>
+            <h3>Reaction time should be less than 00.80 seconds.</h3>
           
           </div>
       </div>  
