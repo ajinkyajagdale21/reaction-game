@@ -6,10 +6,10 @@ h2 {
   justify-content: center;
 }
 li {
-  padding: 0.5rem 0.5rem;
+  padding: 0.25rem 0.25rem;
   display: flex;
   justify-content: flex-start;
-  font-size: large;
+  font-size: medium;
   font-weight: 400;
 }
 .start-button {
@@ -25,4 +25,5 @@ li {
   border-radius: 0.5rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin: 0.25rem;
 }
