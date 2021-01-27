@@ -72,7 +72,7 @@ function Buttons({data,setData,randomNum,time,setTime,timerOn,setTimerOn}) {
           :
            <h3 style={{color:"red"}}>You clicked wrong button !!!</h3>
           }
-            <h3>Reaction time should be less than 00.80 seconds.</h3>
+            <h3>Reaction time should be less than 00.60 seconds.</h3>
           
           </div>
           
